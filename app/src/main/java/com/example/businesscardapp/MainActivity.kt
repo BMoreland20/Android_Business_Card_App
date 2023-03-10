@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun BusinessCardApp() {
     //val PrimaryColor = Color(0xFF073042)
-    Surface(color = Color.Cyan) {
+    Surface(color = Color.White) {
         Column(Modifier.fillMaxWidth()) {
             Row {
                 ComposableInfoTop(
@@ -64,7 +64,7 @@ private fun ComposableInfoTop(
     jobTitle: String,
     modifier: Modifier = Modifier
 ) {
-    val image = painterResource(R.drawable.ic_launcher_foreground)
+    val image = painterResource(R.drawable.android_image)
     Column(
         modifier = modifier
             .fillMaxSize()

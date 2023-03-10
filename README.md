@@ -1,1 +1,2 @@
 # Android_Business_Card_App
+Basic business card app that displays an image, Name, and Job Title in the center of the screen.  This app will also display basic contact information at the bottom of the screen.

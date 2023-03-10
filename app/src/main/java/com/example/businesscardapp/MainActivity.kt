@@ -3,7 +3,9 @@ package com.example.businesscardapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -19,9 +21,7 @@ class MainActivity : ComponentActivity() {
             BusinessCardAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
                     BusinessCardApp()
                 }
             }
@@ -30,7 +30,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BusinessCardApp(name: String) {
+fun BusinessCardApp() {
+    Column(Modifier.fillMaxWidth()) {
+    }
 
 }
 

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Business Card App</string>
+    <string name="full_name">John Doe</string>
+    <string name="title">Software Quality Assurance Analyst</string>
+    <string name="phone_number">(123)456-7890</string>
+    <string name="social_link">gitgub.com/JohnDoe</string>
+    <string name="email_address">John.Doe@gmail.com</string>
 </resources>

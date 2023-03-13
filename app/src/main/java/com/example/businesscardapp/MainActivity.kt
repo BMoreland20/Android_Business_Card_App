@@ -1,11 +1,14 @@
 package com.example.businesscardapp
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -38,20 +41,26 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BusinessCardApp() {
-    //val PrimaryColor = Color(0xFF073042)
-    Surface(color = Color.Cyan) {
-        Column(Modifier.fillMaxWidth()) {
-            Row {
-                ComposableInfoTop(
-                    name = stringResource(R.string.full_name),
-                    jobTitle = stringResource(R.string.title)
-                )
-                ComposableInfoBottom(
-                    phoneNumber = stringResource(R.string.phone_number),
-                    socialLink = stringResource(R.string.social_link),
-                    email = stringResource(R.string.email_address)
-                )
-            }
+    Column(
+        modifier = Modifier
+            .fillMaxHeight()
+            .fillMaxWidth()
+            .background(color = MaterialTheme.colors.backgroundColor),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Row(Modifier.weight(1f)) {
+            ComposableInfoTop(
+                name = stringResource(R.string.full_name),
+                jobTitle = stringResource(R.string.title)
+            )
+        }
+        Row(Modifier.weight(1f)) {
+            ComposableInfoBottom(
+                phoneNumber = stringResource(R.string.phone_number),
+                socialLink = stringResource(R.string.social_link),
+                email = stringResource(R.string.email_address)
+            )
         }
     }
 }
@@ -62,27 +71,31 @@ private fun ComposableInfoTop(
     jobTitle: String,
     modifier: Modifier = Modifier
 ) {
-    val image = painterResource(R.drawable.android_image_transparency)
+    val image = painterResource(R.drawable.android_robot_head_transparency)
     Column(
         modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Bottom
     ) {
         Image(
             painter = image,
             contentDescription = null,
-            contentScale = ContentScale.Fit
+            modifier = Modifier
+                .height(60.dp)
+                .width(85.dp)
         )
         Text(
             text = name,
             fontWeight = FontWeight.Bold,
+            color = Color.White,
             fontSize = 34.sp
         )
         Text(
             text = jobTitle,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colors.androidGreen,
             fontSize = 17.sp
         )
     }
@@ -105,16 +118,19 @@ private fun ComposableInfoBottom(
         Text(
             text = phoneNumber,
             fontWeight = FontWeight.Bold,
+            color = Color.White,
             fontSize = 16.sp
         )
         Text(
             text = socialLink,
             fontWeight = FontWeight.Bold,
+            color = Color.White,
             fontSize = 16.sp
         )
         Text(
             text = email,
             fontWeight = FontWeight.Bold,
+            color = Color.White,
             fontSize = 16.sp
         )
     }

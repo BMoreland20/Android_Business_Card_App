@@ -1,21 +1,19 @@
 package com.example.businesscardapp
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -108,6 +106,9 @@ private fun ComposableInfoBottom(
     email: String,
     modifier: Modifier = Modifier
 ) {
+    val phoneIcon = painterResource(R.drawable.phone_icon)
+    val socialIcon = painterResource(R.drawable.social_icon)
+    val emailIcon = painterResource(R.drawable.email_icon)
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -115,24 +116,60 @@ private fun ComposableInfoBottom(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
-        Text(
-            text = phoneNumber,
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            fontSize = 16.sp
-        )
-        Text(
-            text = socialLink,
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            fontSize = 16.sp
-        )
-        Text(
-            text = email,
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            fontSize = 16.sp
-        )
+        Row(modifier = modifier
+            .fillMaxWidth()
+            .padding(start = 40.dp)
+        ) {
+            Icon(
+                painter = phoneIcon,
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(start = 25.dp),
+                Color(0xFF3ddc84)
+            )
+            Text(
+                text = phoneNumber,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+                fontSize = 16.sp
+            )
+        }
+        Row(modifier = modifier
+            .fillMaxWidth()
+            .padding(start = 40.dp)
+        ) {
+            Icon(
+                painter = socialIcon,
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(start = 25.dp),
+                Color(0xFF3ddc84)
+            )
+            Text(
+                text = socialLink,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+                fontSize = 16.sp
+            )
+        }
+        Row(modifier = modifier
+            .fillMaxWidth()
+            .padding(start = 40.dp)
+        ) {
+            Icon(
+                painter = emailIcon,
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(start = 25.dp),
+                Color(0xFF3ddc84)
+            )
+            Text(
+                text = email,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+                fontSize = 16.sp
+            )
+        }
     }
 }
 

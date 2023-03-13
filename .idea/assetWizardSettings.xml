@@ -123,7 +123,18 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="3ddc84" />
-                                                <entry key="imagePath" value="C:\Users\Blaine\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\Blaine\AppData\Local\Temp\baseline_email_24.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/email/baseline_email_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>

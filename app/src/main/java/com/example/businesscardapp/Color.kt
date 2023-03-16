@@ -6,7 +6,7 @@ import androidx.compose.ui.graphics.Color
 val AndroidBlue = Color(0xFF073042)
 
 val Colors.backgroundColor
-    get() = if (isLight) AndroidBlue else AndroidBlue
+    get() = AndroidBlue
 
 val AndroidGreen = Color(0xFF3DDC84)
 
